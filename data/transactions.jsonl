@@ -1,0 +1,3 @@
+{"id": "76d83fd3", "date": "2026-05-15", "type": "expense", "category": "교통", "amount": 12000, "memo": "점심", "tags": ["회사", "팀"]}
+{"id": "a43e3a71", "date": "2026-05-20", "type": "expense", "category": "교통", "amount": 2500, "memo": "버스", "tags": []}
+{"id": "2adb3561", "date": "2026-05-25", "type": "expense", "category": "교통", "amount": 3000, "memo": "택시", "tags": []}
