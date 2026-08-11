@@ -570,3 +570,29 @@ python -m budget_app --show-timing list --limit 5
 - Python 3.10 이상
 - 표준 라이브러리만 사용 (`argparse`, `csv`, `dataclasses`, `json`, `pathlib`, `tempfile`, `uuid`, `abc`, `functools`, `time`)
 - 외부 라이브러리 설치 불필요
+
+---
+
+## 🚀 실행 방법
+
+### 설치
+```bash
+pip install -r requirements.txt  # 표준 라이브러리만 사용 (외부 패키지 불필요)
+```
+
+### 실행
+```bash
+python budget_app/main.py
+```
+
+---
+
+## 🧪 테스트 방법
+
+### 수동 테스트
+1. 프로그램 실행 → 메뉴에서 "입력" 선택 → 수입/지출 입력
+2. "조회" 선택 → 입력한 내역 확인
+3. "수정" 선택 → 기존 내역 수정
+4. "삭제" 선택 → 내역 삭제
+5. "통계" 선택 → 수입/지출 합계 확인
+6. 종료 후 재실행 → 데이터가 파일에 저장되어 유지되는지 확인
