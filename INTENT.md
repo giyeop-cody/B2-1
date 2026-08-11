@@ -35,6 +35,7 @@ Python 기본기와 Git 워크플로우를 실제 프로그램 제작으로 체�
 3. 클래스/객체 지향
 4. 예외 처리 (try/except)
 5. Git 기본 (add, commit, push, branch)
+6. 아키텍처 패턴 (usecase/repo/view 분리)
 
 ## 7. 이전/다음 과제와의 연결
 - 이전: B1-2 (서버 장애 분석) — 서버에서 프로그래밍으로 전환
