@@ -1,5 +1,16 @@
 # B2-1 Budget App — 계층적 파일 기반 가계부 CLI
 
+
+## 📌 과제 정보
+
+| 항목 | 내용 |
+|------|------|
+| **과목** | Python과 Git 심화 |
+| **난이도** | ★★☆ (Lv.2) |
+| **학습 시간** | 60분 |
+| **필수 여부** | ✅ 필수 |
+| **과제 번호** | 185006 |
+
 > Python 표준 라이브러리만으로 구현한 **MVC + Clean Architecture** 계층 구조의 파일 기반 가계부 CLI입니다.  
 > 모든 모듈(Repository, Presenter, View)을 교체해도 정상 동작하도록 **Interface 계층**으로 Affinity를 보장합니다.
 
