@@ -1,0 +1,206 @@
+== [1/5] B1-1 앱(agent-app) 종료 — 포트 15034 확보 ==
+(실행 중 아님)
+포트 15034 비어 있음
+
+== [2/5] agent-leak-app 배치: /home/agent-admin/agent-app/agent-leak-app ==
+-rwxr-xr-x 1 agent-admin agent-common 6502016 Oct  8 11:03 /home/agent-admin/agent-app/agent-leak-app
+
+== [3/5] B1-2 프로세스 관제 스크립트 배치 (B1-1 monitor.sh 와 별개) ==
+total 28
+-rwxr-x--- 1 agent-dev agent-core 4365 Oct  8 11:03 capture-stacktrace.sh
+-rwxr-x--- 1 agent-dev agent-core  967 Oct  8 11:03 monitor-proc.sh
+-rwxr-x--- 1 agent-dev agent-core 4774 Oct  8 11:00 monitor.sh
+-rwxr-x--- 1 agent-dev agent-core 3959 Oct  8 11:00 monitor.sh.orig
+-rwxr-x--- 1 agent-dev agent-core 2039 Oct  8 11:00 report.sh
+
+== [4/5] B1-1 에서 물려받은 것들 그대로인지 확인 ==
+uid=1000(agent-admin) gid=1002(agent-admin) groups=1002(agent-admin),1000(agent-common),1001(agent-core)
+drwxr-x---  1 agent-admin agent-common  86 Oct  8 11:03 /home/agent-admin/agent-app
+drwxrwx---+ 1 agent-admin agent-core    44 Oct  8 10:55 /home/agent-admin/agent-app/api_keys
+drwxrwx---+ 1 agent-admin agent-common   0 Oct  8 11:02 /home/agent-admin/agent-app/upload_files
+drwxrwx---+ 1 agent-admin agent-core   856 Oct  8 11:00 /var/log/agent-app
+total 8
+-rw-r----- 1 agent-admin agent-core 19 Oct  8 11:00 secret.key
+-rw-r----- 1 agent-admin agent-core 19 Oct  8 11:00 t_secret.key
+SSH: port 20022
+방화벽: -P INPUT DROP
+스케줄러: 미가동
+
+== [5/5] 부트 조건 만족 여부 드라이런 (5초) ==
+>>> Starting Agent Boot Sequence...
+[1/6] Checking User Account               [OK]
+   ... Running as service user 'agent-admin' (uid=1000)
+[2/6] Verifying Environment Variables     [OK]
+   ... All required Envs correct
+[3/6] Checking Required Files             [OK]
+   ... Verified 'secret.key' with correct key string.
+[4/6] Checking Port Availability          [OK]
+   ... Port 15034 is available.
+[5/6] Verifying Log Permission            [OK]
+   ... Log directory is writable: /var/log/agent-app
+[6/6] Verifying Mission Environment       [OK]
+   ... MEMORY_LIMIT=512MB, CPU_MAX_OCCUPY=50%, MULTI_THREAD_ENABLE=False
+------------------------------------------------------------
+All Boot Checks Passed!
+Agent READY
+2026-10-08 11:03:04,977 [INFO] [SafetyGuard] Process priority lowered (nice=10).
+2026-10-08 11:03:04,977 [INFO] Agent listening at port 15034
+
+==================================================
+
+== DEPLOY DONE ==
+Removed "/etc/systemd/system/multi-user.target.wants/codyssey-b1-1.service".
+Created symlink /etc/systemd/system/multi-user.target.wants/codyssey-b1-2.service → /etc/systemd/system/codyssey-b1-2.service.
+active
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,428 [INFO] >>> Scenario Selected: [Healthy System Monitoring]
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: >>> [SYSTEM] ALL CONFIGURATIONS OPTIMAL. RUNNING STABILITY TEST... <<<
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,428 [INFO] [Scheduler] Task Scheduler Initialized.
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,428 [INFO] [Scheduler] Registered Tasks: ['Thread-A', 'Thread-B', 'Thread-C']
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,428 [INFO] [Scheduler] Starting task execution...
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,428 [INFO] [Thread-A] Task Started. Calculating... (20%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,479 [INFO] [Thread-A] Calculating... (40%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,531 [INFO] [Thread-A] Calculating... (60%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,583 [INFO] [Thread-A] Calculating... (80%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,635 [INFO] [Thread-A] Task Completed. (100%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,686 [INFO] [Thread-B] Task Started. Calculating... (20%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,738 [INFO] [Thread-B] Calculating... (40%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,789 [INFO] [Thread-B] Calculating... (60%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,840 [INFO] [Thread-B] Calculating... (80%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,892 [INFO] [Thread-B] Task Completed. (100%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,944 [INFO] [Thread-C] Task Started. Calculating... (20%)
+Oct 08 10:59:03 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:03,996 [INFO] [Thread-C] Calculating... (40%)
+Oct 08 10:59:04 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:04,048 [INFO] [Thread-C] Calculating... (60%)
+Oct 08 10:59:04 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:04,100 [INFO] [Thread-C] Calculating... (80%)
+Oct 08 10:59:04 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:04,152 [INFO] [Thread-C] Task Completed. (100%)
+Oct 08 10:59:04 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:04,204 [INFO] [Scheduler] All tasks completed.
+Oct 08 10:59:04 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:04,237 [INFO] [MemoryWorker] Current Heap: 25MB
+Oct 08 10:59:04 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:04,238 [INFO] [CpuWorker] Started. Maximum CPU Limit: 50%
+Oct 08 10:59:04 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:04,238 [INFO] [CpuWorker] Current Load: 5.00%
+Oct 08 10:59:07 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:07,292 [INFO] [MemoryWorker] Current Heap: 50MB
+Oct 08 10:59:07 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:07,357 [INFO] [CpuWorker] Current Load: 13.24%
+Oct 08 10:59:10 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:10,352 [INFO] [MemoryWorker] Current Heap: 75MB
+Oct 08 10:59:10 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:10,478 [INFO] [CpuWorker] Current Load: 20.96%
+Oct 08 10:59:13 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:13,404 [INFO] [MemoryWorker] Current Heap: 100MB
+Oct 08 10:59:13 codyssey-b1-repro bash[6811]: 2026-10-08 10:59:13,596 [INFO] [CpuWorker] Current Load: 29.91%
+Oct 08 10:59:13 codyssey-b1-repro systemd[1]: Stopping codyssey-b1-2.service - Codyssey B1-2 application...
+Oct 08 10:59:13 codyssey-b1-repro systemd[1]: codyssey-b1-2.service: Deactivated successfully.
+Oct 08 10:59:13 codyssey-b1-repro systemd[1]: Stopped codyssey-b1-2.service - Codyssey B1-2 application.
+-- Boot 03847c7eb48741a485ec3ec03825ef90 --
+Oct 08 10:59:14 codyssey-b1-repro systemd[1]: Started codyssey-b1-2.service - Codyssey B1-2 application.
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: >>> Starting Agent Boot Sequence...
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: [1/6] Checking User Account               [OK]
+Oct 08 10:59:14 codyssey-b1-repro bash[378]:    ... Running as service user 'agent-admin' (uid=1000)
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: [2/6] Verifying Environment Variables     [OK]
+Oct 08 10:59:14 codyssey-b1-repro bash[378]:    ... All required Envs correct
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: [3/6] Checking Required Files             [OK]
+Oct 08 10:59:14 codyssey-b1-repro bash[378]:    ... Verified 'secret.key' with correct key string.
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: [4/6] Checking Port Availability          [OK]
+Oct 08 10:59:14 codyssey-b1-repro bash[378]:    ... Port 15034 is available.
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: [5/6] Verifying Log Permission            [OK]
+Oct 08 10:59:14 codyssey-b1-repro bash[378]:    ... Log directory is writable: /var/log/agent-app
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: [6/6] Verifying Mission Environment       [OK]
+Oct 08 10:59:14 codyssey-b1-repro bash[378]:    ... MEMORY_LIMIT=512MB, CPU_MAX_OCCUPY=50%, MULTI_THREAD_ENABLE=False
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: ------------------------------------------------------------
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: All Boot Checks Passed!
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: Agent READY
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: 2026-10-08 10:59:14,540 [INFO] [SafetyGuard] Process priority lowered (nice=10).
+Oct 08 10:59:14 codyssey-b1-repro bash[378]: 2026-10-08 10:59:14,540 [INFO] Agent listening at port 15034
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: ==================================================
+Oct 08 10:59:16 codyssey-b1-repro bash[378]:  [ Agent Initiate ] Resource Check
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: ==================================================
+Oct 08 10:59:16 codyssey-b1-repro bash[378]:  [ MEMORY ] Limit: 512MB                 [ OK ]
+Oct 08 10:59:16 codyssey-b1-repro bash[378]:  [ CPU    ] Limit: 50%                  [ OK ]
+Oct 08 10:59:16 codyssey-b1-repro bash[378]:  [ THREAD ] Concurrency: False                 [ OK ]
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: --------------------------------------------------
+Oct 08 10:59:16 codyssey-b1-repro bash[378]:  >>> SYSTEM STATUS: STABLE. STARTING WORKLOAD MONITORING...
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: ==================================================
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,552 [INFO] >>> Scenario Selected: [Healthy System Monitoring]
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: >>> [SYSTEM] ALL CONFIGURATIONS OPTIMAL. RUNNING STABILITY TEST... <<<
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,552 [INFO] [Scheduler] Task Scheduler Initialized.
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,552 [INFO] [Scheduler] Registered Tasks: ['Thread-A', 'Thread-B', 'Thread-C']
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,552 [INFO] [Scheduler] Starting task execution...
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,552 [INFO] [Thread-A] Task Started. Calculating... (20%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,604 [INFO] [Thread-A] Calculating... (40%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,656 [INFO] [Thread-A] Calculating... (60%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,708 [INFO] [Thread-A] Calculating... (80%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,759 [INFO] [Thread-A] Task Completed. (100%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,811 [INFO] [Thread-B] Task Started. Calculating... (20%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,863 [INFO] [Thread-B] Calculating... (40%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,915 [INFO] [Thread-B] Calculating... (60%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,967 [INFO] [Thread-B] Calculating... (80%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,019 [INFO] [Thread-B] Task Completed. (100%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,071 [INFO] [Thread-C] Task Started. Calculating... (20%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,123 [INFO] [Thread-C] Calculating... (40%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,175 [INFO] [Thread-C] Calculating... (60%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,226 [INFO] [Thread-C] Calculating... (80%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,278 [INFO] [Thread-C] Task Completed. (100%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,330 [INFO] [Scheduler] All tasks completed.
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,368 [INFO] [MemoryWorker] Current Heap: 25MB
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,369 [INFO] [CpuWorker] Started. Maximum CPU Limit: 50%
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,369 [INFO] [CpuWorker] Current Load: 5.00%
+Oct 08 10:59:20 codyssey-b1-repro bash[378]: 2026-10-08 10:59:20,419 [INFO] [MemoryWorker] Current Heap: 50MB
+Oct 08 10:59:20 codyssey-b1-repro bash[378]: 2026-10-08 10:59:20,481 [INFO] [CpuWorker] Current Load: 14.79%
+Oct 08 10:59:23 codyssey-b1-repro bash[378]: 2026-10-08 10:59:23,474 [INFO] [MemoryWorker] Current Heap: 75MB
+Oct 08 10:59:23 codyssey-b1-repro bash[378]: 2026-10-08 10:59:23,598 [INFO] [CpuWorker] Current Load: 21.75%
+Oct 08 10:59:26 codyssey-b1-repro bash[378]: 2026-10-08 10:59:26,529 [INFO] [MemoryWorker] Current Heap: 100MB
+Oct 08 10:59:26 codyssey-b1-repro bash[378]: 2026-10-08 10:59:26,717 [INFO] [CpuWorker] Current Load: 27.91%
+Oct 08 10:59:29 codyssey-b1-repro bash[378]: 2026-10-08 10:59:29,583 [INFO] [MemoryWorker] Current Heap: 125MB
+Oct 08 10:59:29 codyssey-b1-repro bash[378]: 2026-10-08 10:59:29,829 [INFO] [CpuWorker] Current Load: 30.69%
+Oct 08 10:59:32 codyssey-b1-repro bash[378]: 2026-10-08 10:59:32,639 [INFO] [MemoryWorker] Current Heap: 150MB
+Oct 08 10:59:32 codyssey-b1-repro bash[378]: 2026-10-08 10:59:32,949 [INFO] [CpuWorker] Current Load: 34.49%
+Oct 08 10:59:33 codyssey-b1-repro systemd[1]: Stopping codyssey-b1-2.service - Codyssey B1-2 application...
+Oct 08 10:59:33 codyssey-b1-repro systemd[1]: codyssey-b1-2.service: Deactivated successfully.
+Oct 08 10:59:33 codyssey-b1-repro systemd[1]: Stopped codyssey-b1-2.service - Codyssey B1-2 application.
+Oct 08 11:03:11 codyssey-b1-repro systemd[1]: Started codyssey-b1-2.service - Codyssey B1-2 application.
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: >>> Starting Agent Boot Sequence...
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: [1/6] Checking User Account               [OK]
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]:    ... Running as service user 'agent-admin' (uid=1000)
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: [2/6] Verifying Environment Variables     [OK]
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]:    ... All required Envs correct
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: [3/6] Checking Required Files             [OK]
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]:    ... Verified 'secret.key' with correct key string.
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: [4/6] Checking Port Availability          [OK]
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]:    ... Port 15034 is available.
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: [5/6] Verifying Log Permission            [OK]
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]:    ... Log directory is writable: /var/log/agent-app
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: [6/6] Verifying Mission Environment       [OK]
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]:    ... MEMORY_LIMIT=512MB, CPU_MAX_OCCUPY=50%, MULTI_THREAD_ENABLE=False
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: ------------------------------------------------------------
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: All Boot Checks Passed!
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: Agent READY
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:11,386 [INFO] [SafetyGuard] Process priority lowered (nice=10).
+Oct 08 11:03:11 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:11,386 [INFO] Agent listening at port 15034
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: ==================================================
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]:  [ Agent Initiate ] Resource Check
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: ==================================================
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]:  [ MEMORY ] Limit: 512MB                 [ OK ]
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]:  [ CPU    ] Limit: 50%                  [ OK ]
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]:  [ THREAD ] Concurrency: False                 [ OK ]
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: --------------------------------------------------
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]:  >>> SYSTEM STATUS: STABLE. STARTING WORKLOAD MONITORING...
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: ==================================================
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,397 [INFO] >>> Scenario Selected: [Healthy System Monitoring]
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: >>> [SYSTEM] ALL CONFIGURATIONS OPTIMAL. RUNNING STABILITY TEST... <<<
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,397 [INFO] [Scheduler] Task Scheduler Initialized.
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,397 [INFO] [Scheduler] Registered Tasks: ['Thread-A', 'Thread-B', 'Thread-C']
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,398 [INFO] [Scheduler] Starting task execution...
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,398 [INFO] [Thread-A] Task Started. Calculating... (20%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,450 [INFO] [Thread-A] Calculating... (40%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,501 [INFO] [Thread-A] Calculating... (60%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,553 [INFO] [Thread-A] Calculating... (80%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,605 [INFO] [Thread-A] Task Completed. (100%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,657 [INFO] [Thread-B] Task Started. Calculating... (20%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,709 [INFO] [Thread-B] Calculating... (40%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,760 [INFO] [Thread-B] Calculating... (60%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,812 [INFO] [Thread-B] Calculating... (80%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,863 [INFO] [Thread-B] Task Completed. (100%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,915 [INFO] [Thread-C] Task Started. Calculating... (20%)
+Oct 08 11:03:13 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:13,967 [INFO] [Thread-C] Calculating... (40%)
+Oct 08 11:03:14 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:14,017 [INFO] [Thread-C] Calculating... (60%)
+Oct 08 11:03:14 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:14,069 [INFO] [Thread-C] Calculating... (80%)
+Oct 08 11:03:14 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:14,120 [INFO] [Thread-C] Task Completed. (100%)
+Oct 08 11:03:14 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:14,172 [INFO] [Scheduler] All tasks completed.
+Oct 08 11:03:14 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:14,211 [INFO] [MemoryWorker] Current Heap: 25MB
+Oct 08 11:03:14 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:14,211 [INFO] [CpuWorker] Started. Maximum CPU Limit: 50%
+Oct 08 11:03:14 codyssey-b1-repro bash[5144]: 2026-10-08 11:03:14,212 [INFO] [CpuWorker] Current Load: 5.00%
+LISTEN 0      1            0.0.0.0:15034      0.0.0.0:*          

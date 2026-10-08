@@ -1,0 +1,33 @@
+{
+  "sources": {
+    "B1-1": "https://github.com/giyeop-cody/B1-1/tree/acddd0d2990f3a6be4d20aaec11c6d77473a9777",
+    "B1-2": "https://github.com/giyeop-cody/B1-2/tree/7de53d78f973783bf563335a0b611bcc0c85df36"
+  },
+  "files": [
+    {
+      "path": "B1-1/agent-app-linux-x86",
+      "bytes": 6498144,
+      "sha256": "cdbae8c066e734916b7cd25dc9e651818acf63b2e6817125ede5e85a4de0ff5a"
+    },
+    {
+      "path": "B1-1/monitor.sh",
+      "bytes": 3959,
+      "sha256": "43c818d6c7d74f91b9f16a3f41a4702cd3cb9a940f37ce346361d01cc5d6347b"
+    },
+    {
+      "path": "B1-1/report.sh",
+      "bytes": 2039,
+      "sha256": "1069d05e2730960f8b233e49bc0f1e830017ceb4fb6b32f2f4897e1dd8a7d672"
+    },
+    {
+      "path": "B1-2/agent-leak-app-x86",
+      "bytes": 6502016,
+      "sha256": "7e0a19cfa80ece6b547a5008273661f0d4d71e526e96b51e0d0f341dd1bb3e40"
+    },
+    {
+      "path": "B1-2/vm/monitor.sh",
+      "bytes": 967,
+      "sha256": "ace2bfa8d15949c63539b3b0d73de3e3aba482a7b555de5e5a51a6034062ebfb"
+    }
+  ]
+}

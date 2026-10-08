@@ -646,3 +646,7 @@ python budget_app/main.py
 4. "삭제" 선택 → 내역 삭제
 5. "통계" 선택 → 수입/지출 합계 확인
 6. 종료 후 재실행 → 데이터가 파일에 저장되어 유지되는지 확인
+
+## B1-1 / B1-2 VM 재현 파일
+
+기존 실습 환경을 새 OrbStack 또는 Ubuntu 24.04 amd64 VM에 다시 만드는 설정 파일, 원본 바이너리, 전환·복원 절차와 검증 기록은 [vm-repro/README.md](vm-repro/README.md)에 있습니다.

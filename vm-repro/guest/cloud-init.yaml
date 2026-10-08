@@ -1,0 +1,23 @@
+#cloud-config
+# Optional base VM provisioning; upload this repository and run guest/lab.sh setup.
+timezone: Asia/Seoul
+package_update: true
+packages:
+  - openssh-server
+  - ufw
+  - acl
+  - cron
+  - bc
+  - git
+  - procps
+  - psmisc
+  - gzip
+  - jq
+  - nftables
+  - iproute2
+  - sudo
+  - python3
+  - gdb
+  - strace
+runcmd:
+  - [systemctl, enable, --now, cron]

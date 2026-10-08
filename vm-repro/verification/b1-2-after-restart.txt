@@ -1,0 +1,47 @@
+2026-10-08T10:59:18+09:00
+x86_64
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+enabled
+active
+active
+active
+LISTEN 0      1            0.0.0.0:15034      0.0.0.0:*          
+LISTEN 0      128          0.0.0.0:20022      0.0.0.0:*          
+LISTEN 0      128             [::]:20022         [::]:*          
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: ==================================================
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,552 [INFO] >>> Scenario Selected: [Healthy System Monitoring]
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: >>> [SYSTEM] ALL CONFIGURATIONS OPTIMAL. RUNNING STABILITY TEST... <<<
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,552 [INFO] [Scheduler] Task Scheduler Initialized.
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,552 [INFO] [Scheduler] Registered Tasks: ['Thread-A', 'Thread-B', 'Thread-C']
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,552 [INFO] [Scheduler] Starting task execution...
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,552 [INFO] [Thread-A] Task Started. Calculating... (20%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,604 [INFO] [Thread-A] Calculating... (40%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,656 [INFO] [Thread-A] Calculating... (60%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,708 [INFO] [Thread-A] Calculating... (80%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,759 [INFO] [Thread-A] Task Completed. (100%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,811 [INFO] [Thread-B] Task Started. Calculating... (20%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,863 [INFO] [Thread-B] Calculating... (40%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,915 [INFO] [Thread-B] Calculating... (60%)
+Oct 08 10:59:16 codyssey-b1-repro bash[378]: 2026-10-08 10:59:16,967 [INFO] [Thread-B] Calculating... (80%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,019 [INFO] [Thread-B] Task Completed. (100%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,071 [INFO] [Thread-C] Task Started. Calculating... (20%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,123 [INFO] [Thread-C] Calculating... (40%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,175 [INFO] [Thread-C] Calculating... (60%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,226 [INFO] [Thread-C] Calculating... (80%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,278 [INFO] [Thread-C] Task Completed. (100%)
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,330 [INFO] [Scheduler] All tasks completed.
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,368 [INFO] [MemoryWorker] Current Heap: 25MB
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,369 [INFO] [CpuWorker] Started. Maximum CPU Limit: 50%
+Oct 08 10:59:17 codyssey-b1-repro bash[378]: 2026-10-08 10:59:17,369 [INFO] [CpuWorker] Current Load: 5.00%

@@ -1,0 +1,6 @@
+PASS input B1-1/agent-app-linux-x86
+PASS input B1-1/monitor.sh
+PASS input B1-1/report.sh
+PASS input B1-2/agent-leak-app-x86
+PASS input B1-2/vm/monitor.sh
+PASS all shell syntax
